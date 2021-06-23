@@ -1,0 +1,276 @@
+/* MOBILE */
+/* Universal */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+section {
+    width: 90%;
+    margin: auto;
+}
+
+/* Header */
+
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.main-header-top-bar {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.searchbar {
+    display: flex;
+    max-width: 220px;
+    width: 40%;
+    margin: auto;
+}
+
+.searchbutton {
+    margin-left: 5px;
+    margin: auto;
+}
+
+.logo {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    max-width: 200px;
+}
+
+.frase {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+}
+
+.hamburger-button {
+    background-color: #03264C;
+    border-radius: 10px;
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    max-width: 50px;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    color: #000000;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 0px;
+    text-decoration: none;
+}
+
+/* Main */
+
+.banner {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.section-name {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: 450ms
+}
+
+#truck {
+    color: green;
+    display: block;
+    font-size: 16;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid green;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+        right: 20px;
+        top: -15px;
+}
+
+.product-img {
+    width: 270px;
+}
+
+.product-info {
+    position: relative;
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 270px;
+}
+
+.product-price {
+    font-size: 18px;
+}
+
+.product-name {
+    font-size: 16px;
+    display: none;
+}
+
+.discount {
+    color: green;
+}
+
+article:hover {
+    box-shadow: 0px 0px 10px rgb(100,100, 100);
+}
+
+
+/* Footer */
+
+
+strong {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.terms {
+    color: #666;
+}
+
+#icon {
+   color: #1259c3;
+   font-size: 2em;
+   margin-bottom: 10px;
+   transition: 250ms;
+}
+
+.beneficio {
+    margin-bottom: 25px;
+}
+
+
+
+
+/* TABLET */
+
+@media (min-width: 361px) {
+
+    article {
+        box-shadow: 0px 0px 10px rgb(100,100, 100);
+    }
+
+    .product-name {
+        font-size: 16px;
+        display: block;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .main-navbar {
+        display: block;
+    }
+
+    .main-header-top-bar {
+        display: flex;
+        align-content: space-between;
+    }
+
+    .frase {
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 5px;
+    }
+
+    .discount, .product-price {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+    .beneficios {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .beneficio{
+        width: auto;
+        max-width: 400px;
+    }
+
+    #icon:hover {
+        color: #EAC926;
+    }
+}
+
+
+.loginbutton {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 200ms;
+    background-color: dimgray;
+    color: #FFFFFF;
+}
+
+.loginbutton:hover {
+    background-color: #0022AA;
+    color: #FFFFFF;
+}
