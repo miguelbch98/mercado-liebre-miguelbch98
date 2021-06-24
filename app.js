@@ -13,8 +13,9 @@ const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
 // Servidor
-app.listen (process.env.PORT || port, () =>
-console.log("Corriendo en http://localhost:$(port)")); 
+app.listen (process.env.PORT || 3000, function() {
+console.log("Corriendo en el puerto 3000");
+}); 
 
 // Ruta de Home
 app.get('/',(req, res) =>{
