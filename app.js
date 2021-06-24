@@ -1,4 +1,5 @@
 // Requiere Express
+const { prototype } = require('events');
 const express = require('express'); 
 
 // Require Node Path
@@ -12,9 +13,8 @@ const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
 // Servidor
-app.listen (process.env.PORT || 3000, function() {
-console.log("Corriendo en el servidor 3000");
-}); 
+app.listen (process.env.PORT || port, () =>
+console.log("Corriendo en http://localhost:$(port)")); 
 
 // Ruta de Home
 app.get('/',(req, res) =>{
