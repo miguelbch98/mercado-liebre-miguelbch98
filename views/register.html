@@ -63,31 +63,68 @@
 
     <main>
 
-        <div>
+        <div class="formulario">
 
-            <h2>Registro de Usuario</h2>
+            <h2 class="registro">Registro de Usuario</h2>
             <form action="/" method="POST">
 
             <br>
             <h3>Datos personales</h3>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+            <label for= "nombre">Nombre y Apellido:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ej. Juan López">
 
             <br>
 
+            <label for= "birthdate">Fecha de nacimiento:</label>
             <input type="date" name="birthdate" id="birthdate">
  
             <br>
+            
+            <label for= "domicilio">Domicilio:</label>
+            <br>
+            <input type="text" name="Calle" id="domicilio" placeholder="Calle">
+            <br>
+            <input type="text" name="Numero-Interior" id="domicilio" placeholder="Número Interior">
+            <br>
+            <input type="text" name="Numero-Exterior" id="domicilio" placeholder="Numero Exterior">
+            <br>
+            <input type="text" name="Ciudad" id="domicilio" placeholder="Ciudad">
+            <br>
+            <input type="text" name="Estado" id="domicilio" placeholder="Estado">
+            <br>
+            <input type="text" name="Código Postal" id="domicilio" placeholder="Código Postal">
 
-            <label for= "username">Nombre de Usuario:</label>
-            <input type="text" name="username" id="username">
+            <br>
+
+            <h3>Nuevo usuario</h3>
+
+            <label for= "username">Nombre de usuario:</label>
+            <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
+            
+            <br>
+
+            <label for= "username">Nombre de usuario:</label>
+            <input type="text" name="username" id="username" placeholder="JuanLopez123">
+
+            <br>
+
+            <label for="profile-picture">Foto de Perfil:</label>
+            <br>
+            <input type="file" name="profile-picture">
+
+            <br>
+
+            <label for= "contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" id="contraseña">
 
             <br>
             
-            <label for= "domicilio">Domicilio:</label>
-            <input type="text" name="domicilio" id="domicilio">
+            <label for= "contraseña2">Confirmar contraseña:</label>
+            <input type="password" name="Confirmar contraseña" id="contraseña2">
 
             <br>
 
+            <h3>Preferencias</h3>
             <label for=profiletype>¿Para qué quieres utilizar tu cuenta?</label>
             
             <br>
@@ -102,27 +139,17 @@
             <br>
 
             <input type="checkbox" name="category" value="electronica"> <label for= "electronica">Electrónica</label>
+            <br>
             <input type="checkbox" name="category" value="moda"> <label for= "moda">Moda</label>
+            <br>
             <input type="checkbox" name="category" value="hogar"> <label for= "hogar">Hogar</label>
+            <br>
             <input type="checkbox" name="category" value="jugueteria"> <label for= "jugueteria">Juguetería</label>
+            <br>
             <input type="checkbox" name="category" value="vida-sana"> <label for= "vida-sana">Vida Sana</label>
 
             <br>
 
-            <label for="profile-picture">Sube tu Foto de Perfil</label>
-            <input type="file" name="profile-picture">
-
-            <br>
-
-            <label for= "contraseña">Contraseña:</label>
-            <input type="password" name="contraseña" id="contraseña">
-
-            <br>
-            
-            <label for= "contraseña2">Confirmar contraseña:</label>
-            <input type="password" name="Confirmar contraseña" id="contraseña2">
-
-            <br>
             <br>
 
             <button type="reset">Cancelar</button>

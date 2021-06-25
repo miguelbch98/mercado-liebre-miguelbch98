@@ -106,9 +106,13 @@ section {
 }
 
 article {
-    margin-bottom: 10px;
+    margin: 10px;
     background-color: #ffffff;
     transition: 450ms
+}
+
+article:hover {
+    display: block;
 }
 
 #truck {
@@ -143,10 +147,6 @@ article {
     font-size: 18px;
 }
 
-.product-name {
-    font-size: 16px;
-    display: none;
-}
 
 .discount {
     color: green;
@@ -154,6 +154,26 @@ article {
 
 article:hover {
     box-shadow: 0px 0px 10px rgb(100,100, 100);
+}
+
+
+
+/*Formualario*/
+
+.formulario {
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.registro {
+    background-color: #EAC926;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
 }
 
 
@@ -188,6 +208,20 @@ footer {
     margin-bottom: 25px;
 }
 
+.product-name {
+    display: none;
+}
+
+body:hover + .product-name {
+    display: block;
+    color: white;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+        left: 0px;
+        top: -30px;
+}
+
 
 
 
@@ -197,11 +231,6 @@ footer {
 
     article {
         box-shadow: 0px 0px 10px rgb(100,100, 100);
-    }
-
-    .product-name {
-        font-size: 16px;
-        display: block;
     }
 
     .hamburger-button {
