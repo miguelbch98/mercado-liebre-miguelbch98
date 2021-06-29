@@ -1,3 +1,17 @@
+/*
+
+GENERALES
+
+Amarillo: #EAC926; 
+Azul: #03264C; 
+Celeste: #1259c3; 
+Gris oscuro: #666; 
+Gris claro: #ebebeb; 
+Verde: #39b54a;
+
+*/
+
+
 /* MOBILE */
 /* Universal */
 
@@ -27,27 +41,36 @@ section {
 
 .main-header-top-bar {
     display: flex;
-    align-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.barradebusqueda {
+    display: flex;
+    width: 50%;
 }
 
 .searchbar {
-    display: flex;
-    max-width: 220px;
-    width: 40%;
+    width: 80%;
     margin: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .searchbutton {
-    margin-left: 5px;
     margin: auto;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
 }
 
 .logo {
     width: 50%;
-    margin: auto;
-    display: flex;
+    align-self: flex-start;
     max-width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .frase {
@@ -58,7 +81,7 @@ section {
 }
 
 .hamburger-button {
-    background-color: #03264C;
+    background-color: #1259c3;
     border-radius: 10px;
     color: #ffffff;
     display: block;
@@ -71,6 +94,7 @@ section {
 
 .main-navbar {
     display: none;
+    margin-top: 15px;
 }
 
 .main-navbar ul {
@@ -103,6 +127,8 @@ section {
     margin-left: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #666;
+    font-size: 24px;
 }
 
 article {
@@ -112,14 +138,14 @@ article {
 }
 
 #truck {
-    color: green;
+    color: #39B54A;
     display: block;
     font-size: 16;
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid green;
-    background-color: white;
+    border: 1px solid #39B54A;
+    background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
         right: 20px;
@@ -141,14 +167,20 @@ article {
 
 .product-price {
     font-size: 18px;
+    text-align: center;
+    width: 30%;
 }
 
 .product-name {
     display: none;
+    font-size: 16px;
 }
 
 .discount {
-    color: green;
+    color: #39B54A;
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
 }
 
 article:hover {
@@ -157,32 +189,13 @@ article:hover {
 
 article:hover .product-name {
     display: block;
-    color: white;
+    color: #ffffff;
     padding: 5px;
     background-color: rgba(0,0,0,0.5);
     position: absolute;
         left: 0px;
         top: -30px;
 }
-
-/*Formualario*/
-
-.formulario {
-    background-color: #fff;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-
-.registro {
-    background-color: #EAC926;
-    padding: 10px;
-    color: #FFF;
-    text-align: center;
-}
-
 
 /* Footer */
 
@@ -202,6 +215,15 @@ footer {
 
 .terms {
     color: #666;
+    font-size: 12px;
+    margin-top: 13px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 12px;
+    margin-top: 30px;
+    text-align: left;
 }
 
 #icon {
@@ -213,6 +235,7 @@ footer {
 
 .beneficio {
     margin-bottom: 25px;
+    padding: 10px;
 }
 
 
@@ -221,6 +244,10 @@ footer {
 /* TABLET */
 
 @media (min-width: 361px) {
+
+    .barradebusqueda {
+        width: 30%;
+    }
 
     article {
         box-shadow: 0px 0px 10px rgb(100,100, 100);
@@ -231,7 +258,8 @@ footer {
     }
 
     .main-navbar {
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 
     .main-header-top-bar {
@@ -240,13 +268,9 @@ footer {
     }
 
     .frase {
+        width: 30%;
         max-width: 350px;
         text-align: right;
-    }
-
-    .main-navbar {
-        display: flex;
-        justify-content: space-between;
     }
 
     .main-navbar ul {
@@ -284,15 +308,104 @@ footer {
 }
 
 
+/*Registro*/
+
+.formulario {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 35px;
+    padding: 30px;
+}
+
+.seccion-registro {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.campo {
+    border: none;
+    font-family: Roboto, sans-serif;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 98%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.campo-multiple {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancelbutton {
+    padding: 10px;
+    border-radius: 5px;
+    transition: 200ms;
+    background-color: #888;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.cancelbutton:hover {
+    background-color: #666;
+    color: #ffffff;
+}
+
+.registerbutton {
+    padding: 10px;
+    border-radius: 5px;
+    transition: 200ms;
+    background-color: #03264C;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.registerbutton:hover {
+    background-color: #0022AA;
+    color: #ffffff;
+}
+
+/*Login*/
+
+.login {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#username, #contraseña {
+    border:none;
+    margin-bottom: 40px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
 .loginbutton {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 200ms;
-    background-color: dimgray;
-    color: #FFFFFF;
+    background-color: #03264C;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    font-weight: 800;
+    text-decoration: none;
 }
 
 .loginbutton:hover {
     background-color: #0022AA;
-    color: #FFFFFF;
+    color: #ffffff;
 }

@@ -22,11 +22,12 @@
     <header class = "main-header">
         
         <div class = "main-header-top-bar">
-            <img class = "logo" src= /images/logo-mercado-liebre.svg alt="Logo de Mercado Liebre">
-            
-                <input class = "searchbar" type = "search" placeholder="Buscar productos, marcas y más">
-                <button class = "searchbutton"><i class="fas fa-search"></i></button>
+            <a class = "logo" href = "/"><img src= /images/logo-mercado-liebre.svg alt="Logo de Mercado Liebre"></a>
 
+                    <div class = "barradebusqueda">
+                        <input class = "searchbar" type = "search" placeholder="Buscar productos, marcas y más">
+                        <button class = "searchbutton"><i class="fas fa-search"></i></button>
+                    </div>
             <h2 class = "frase">
                 <i class="fas fa-hand-holding-usd"></i>
                 Compra en cuotas sin tarjeta de crédito
@@ -54,83 +55,53 @@
 
     </header>
 
-
-
-    <div>
-        <img class = "banner" src= /images/img-home-banner.jpg alt="Cobrá con todas las tarjetas. Estas fiestas no te pierdas ninguna venta. A solo $249 pesos. Antes $599">
-    </div>
-
-
     <main>
-
         <div class="formulario">
-
-            <h2 class="registro">Registro de Usuario</h2>
             <form action="/" method="POST">
 
-            <br>
-            <h3>Datos personales</h3>
-            <label for= "nombre">Nombre y Apellido:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ej. Juan López">
+            <p class="seccion-registro">Datos personales</p>
+
+            <div class="campo-multiple">
+                <input class = "campo" type="text" name="nombre" id="nombre" placeholder="Nombre" minlength="2" required>
+                <input class = "campo" type="text" name="apellido" id="apellido" placeholder="Apellido" minlength="2" required>
+            </div>
+
+            <input class = "campo" type="email" name="email" id="email" placeholder="Correo electrónico" required>
+            <input class = "campo" type="text" name="username" id="user" placeholder="Nombre de usuario" required>
+            <input class = "campo" type="password" name="contraseña" id="password" placeholder="Contraseña" required minlength="8">
+            <input class = "campo" type="password" name="contraseña2" id="password2" placeholder="Confirmar contraseña" required minlength="8">
+
+            <div class="campo-multiple">
+                <label for="profile-picture">Foto de Perfil</label>
+                <input class = "campo" type="file" name="profile-picture">
+            </div>
 
             <br>
 
-            <label for= "birthdate">Fecha de nacimiento:</label>
-            <input type="date" name="birthdate" id="birthdate">
- 
+            <p class="seccion-registro">Fecha de nacimiento</p>
+            <input class = "campo" type="date" name="birthdate" id="birthdate" required>
+        
+            <p class="seccion-registro">Domicilio</p>            
+                <input class = "campo" type="text" name="Calle" id="domicilio" placeholder="Calle" required>
             <br>
+            <div class="campo-multiple">
+                <input class = "campo" type="text" name="Numero-Exterior" id="domicilio" placeholder="Numero Exterior">
+                <input class = "campo" type="text" name="Código Postal" id="domicilio" placeholder="Código Postal">
+                <input class = "campo" type="text" name="Numero-Interior" id="domicilio" placeholder="Número Interior">
+            </div>
+            <div class="campo-multiple">
+                <input class = "campo" type="text" name="Ciudad" id="domicilio" placeholder="Ciudad" required>
+                <input class = "campo" type="text" name="Estado" id="domicilio" placeholder="Estado" required>
+            </div>
+
+
+            <p class="seccion-registro">Preferencias</p>  
             
-            <label for= "domicilio">Domicilio:</label>
-            <br>
-            <input type="text" name="Calle" id="domicilio" placeholder="Calle">
-            <br>
-            <input type="text" name="Numero-Interior" id="domicilio" placeholder="Número Interior">
-            <br>
-            <input type="text" name="Numero-Exterior" id="domicilio" placeholder="Numero Exterior">
-            <br>
-            <input type="text" name="Ciudad" id="domicilio" placeholder="Ciudad">
-            <br>
-            <input type="text" name="Estado" id="domicilio" placeholder="Estado">
-            <br>
-            <input type="text" name="Código Postal" id="domicilio" placeholder="Código Postal">
-
-            <br>
-
-            <h3>Nuevo usuario</h3>
-
-            <label for= "username">Nombre de usuario:</label>
-            <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
-            
-            <br>
-
-            <label for= "username">Nombre de usuario:</label>
-            <input type="text" name="username" id="username" placeholder="JuanLopez123">
-
-            <br>
-
-            <label for="profile-picture">Foto de Perfil:</label>
-            <br>
-            <input type="file" name="profile-picture">
-
-            <br>
-
-            <label for= "contraseña">Contraseña:</label>
-            <input type="password" name="contraseña" id="contraseña">
-
-            <br>
-            
-            <label for= "contraseña2">Confirmar contraseña:</label>
-            <input type="password" name="Confirmar contraseña" id="contraseña2">
-
-            <br>
-
-            <h3>Preferencias</h3>
             <label for=profiletype>¿Para qué quieres utilizar tu cuenta?</label>
-            
-            <br>
-
-            <input type="radio" name="profiletype" value="comprar"> <label for= "comprar">Comprar</label>
-            <input type="radio" name="profiletype" value="vender"> <label for= "vender">Vender</label>
+            <div>
+                <input type="radio" name="profiletype" value="comprar"> <label for= "comprar">Comprar</label>
+                <input type="radio" name="profiletype" value="vender"> <label for= "vender">Vender</label>
+            </div>
 
             <br>
 
@@ -149,11 +120,13 @@
             <input type="checkbox" name="category" value="vida-sana"> <label for= "vida-sana">Vida Sana</label>
 
             <br>
-
             <br>
 
-            <button type="reset">Cancelar</button>
-            <button type="submit">Enviar</button>
+
+
+            <button class="cancelbutton" type="reset">Cancelar</button>
+            <br>
+            <a href = "/"> </a><button class="registerbutton" type="submit">Enviar</button></a>
         </form>
 
     </div>
@@ -191,7 +164,7 @@
         </div>
         </div>
 
-            <p class = "terms">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+            <p class = "copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
 
     </footer>
     

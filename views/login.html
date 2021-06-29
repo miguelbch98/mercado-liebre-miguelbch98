@@ -22,11 +22,12 @@
     <header class = "main-header">
         
         <div class = "main-header-top-bar">
-            <img class = "logo" src= /images/logo-mercado-liebre.svg alt="Logo de Mercado Liebre">
-            
-                <input class = "searchbar" type = "search" placeholder="Buscar productos, marcas y más">
-                <button class = "searchbutton"><i class="fas fa-search"></i></button>
+            <a class = "logo" href = "/"><img src= /images/logo-mercado-liebre.svg alt="Logo de Mercado Liebre"></a>
 
+                    <div class = "barradebusqueda">
+                        <input class = "searchbar" type = "search" placeholder="Buscar productos, marcas y más">
+                        <button class = "searchbutton"><i class="fas fa-search"></i></button>
+                    </div>
             <h2 class = "frase">
                 <i class="fas fa-hand-holding-usd"></i>
                 Compra en cuotas sin tarjeta de crédito
@@ -55,34 +56,21 @@
     </header>
 
 
-
-    <div>
-        <img class = "banner" src= /images/img-home-banner.jpg alt="Cobrá con todas las tarjetas. Estas fiestas no te pierdas ninguna venta. A solo $249 pesos. Antes $599">
-    </div>
-
-
-
     <main>
         
-        <h2>Inicia Sesión</h2>
-        <form action="/" method="GET">
+        <div class= "login">
+            <form action="/" method="GET">
+                <input type="text" name="email" id="username" placeholder="Correo Electrónico / Número de Teléfono">
 
-            <br>
-            
-            <label for= "username">Nombre de Usuario:</label>
-            <input type="text" name="username" id="username">
+                <br>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
 
-            <br>
+                <br>
 
-            <label for= "contraseña">Contraseña:</label>
-            <input type="password" name="contraseña" id="contraseña">
-
-            <br>
-            <br>
-            <br>
-
-            <button class="loginbutton" type="submit">Iniciar sesión</button>
-        </form>
+                <button class="loginbutton" type="submit">Iniciar sesión</button>
+            </form>
+        
+        </div>
 
         <br>
 
@@ -117,7 +105,7 @@
         </div>
         </div>
 
-            <p class = "terms">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+            <p class = "copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
 
     </footer>
     
