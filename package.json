@@ -1,8 +1,9 @@
 {
   "name": "mercado-liebre",
   "version": "1.0.0",
-  "main": "home.js",
+  "main": "app.js",
   "scripts": {
+    "test": "echo \"Error: no test specifies\" && exit 1",
     "start": "node app.js"
   },
   "author": "",
